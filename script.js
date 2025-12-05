@@ -1,3 +1,5 @@
+alert("Note: Click on image to play the music and double click to pause")
+
 let currentAudio = null;
 
 function playSong(songPath) {
