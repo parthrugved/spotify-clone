@@ -1,0 +1,11 @@
+    <div class="song-card">
+    <div class="album-art">
+        <img src="${item.img}" alt="Album Cover">
+        <div class="play-button" data-song-path="${songPath}">▶</div>
+        <div class="pause-buttonn" data-song-path="${songPath}">⏸️</div>
+    </div>
+    <div class="song-info">
+        <div class="song-title">${item.name}</div>
+        <div class="artist-name">${item.artist}</div>
+    </div>
+    </div>
