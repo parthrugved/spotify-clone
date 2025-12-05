@@ -464,7 +464,7 @@ nav {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1494px) {
     /* Show hamburger menu on mobile */
     .hamburger-menu {
         display: block;
@@ -540,4 +540,74 @@ nav {
     }
 
     /* Cards already stacked vertically */
+}
+.play-btn  {
+    position: absolute;
+    /* bottom: 12px; */
+    /* right: 12px; */
+    display: flex;
+    /* align-items: center;    centers vertically */
+    /* justify-content: center; centers horizontally */
+    background-color: #1db954;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 🟢 FIX: remove unnecessary flex properties here */
+.play-btn img {
+    width: 20px;
+    height: 20px;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+}
+
+
+.pause-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1db954;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: none;
+}
+
+.pause-btn:hover {
+    transform: scale(1.05);
+    background-color: #1ed760;
+}
+
+.pause-btn:active {
+    transform: scale(0.95);
+}
+
+
+.pause-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    filter: brightness(0) invert(0);
+    margin: 0;
+    padding: 0;
 }

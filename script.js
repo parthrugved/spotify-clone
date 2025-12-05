@@ -17,37 +17,51 @@ function playSong(songPath) {
 const songs = [
     {
         name: "life luxary",
-        extesion: ".mp3",
-        img: "https://images.pexels.com/photos/3944104/pexels-photo-3944104.jpeg?_gl=1*zybiqs*_ga*OTcwMDQzMDIuMTc2MzMwMDE2Nw..*_ga_8JE65Q40S6*czE3NjQ5MzM2MDEkbzIkZzEkdDE3NjQ5MzM2MDckajU0JGwwJGgw",
+        extension: ".mp3",   // ✅ fixed typo
+        img: "https://images.pexels.com/photos/3944104/pexels-photo-3944104.jpeg",
         artist: "Unknown"
     },
     {
         name: "life luxary",
-        extesion: ".mp3",
-        img: "https://images.pexels.com/photos/3944104/pexels-photo-3944104.jpeg?_gl=1*zybiqs*_ga*OTcwMDQzMDIuMTc2MzMwMDE2Nw..*_ga_8JE65Q40S6*czE3NjQ5MzM2MDEkbzIkZzEkdDE3NjQ5MzM2MDckajU0JGwwJGgw",
+        extension: ".mp3",
+        img: "https://images.pexels.com/photos/3944104/pexels-photo-3944104.jpeg",
         artist: "Unknown"
     },
-]
+];
 
-const container = document.querySelector('.songs-grid')
+const container = document.querySelector('.songs-grid');
 
 songs.forEach((item) => {
-    const songPath = `songs/${item.name}${item.extesion}`;   
-    const card = `
- <div class="song-card">
-    <div class="album-art">
-        <img onclick="playSong('${songPath}')" src="${item.img}" alt="${item.name}">
-    </div>
-    <div class="song-info">
-        <div class="song-title">${item.name}</div>
-        <div class="artist-name">${item.artist}</div>
-    </div>
- </div>`;
-    container.insertAdjacentHTML("beforeend", card);
+    const songPath = `songs/${item.name}${item.extension}`;
+
+    // Create card element
+    const card = document.createElement('div');
+    card.classList.add('song-card');
+
+    card.innerHTML = `
+        <div class="album-art">
+            <img class="stop" src="${item.img}" alt="${item.name}">
+        </div>
+        <div class="song-info">
+            <div class="song-title">${item.name}</div>
+            <div class="artist-name">${item.artist}</div>
+        </div>
+    `;
+
+    // Attach event listeners to THIS card’s image
+    const imgElement = card.querySelector('.stop');
+    imgElement.addEventListener("click", () => playSong(songPath));
+    imgElement.addEventListener("dblclick", () => {
+        // Example: stop audio on double click
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+    });
+
+    // Append card to container
+    container.appendChild(card);
 });
-
-
-
 
 // Hamburger menu functionality
 const hamburgerMenu = document.getElementById('hamburger-menu');
