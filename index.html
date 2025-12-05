@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo spotify.png">
+    <title>Spotify Web Plyer: For Everyone</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="logo-icon" src="logo.svg" alt="logo">
+            <button class="home-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img" aria-hidden="true"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732z">
+                    </path>
+                </svg>
+            </button>
+            <!--             
+                <input placeholder="&nbsp; What do you want to play?" type="text"> -->
+            <div class="search-container">
+                <input type="text" id="search-input"
+                    placeholder="What do you want to play? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |">
+                <svg data-encore-id="icon" role="img" aria-hidden="true" class="search-icon" data-testid="search-icon"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
+                    </path>
+                </svg>
+                <svg class="folder" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2"></path>
+                    <path
+                        d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.837zM3.525 11l1.913 9h13.123l1.913-9zM4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4h-2V3H6v3H4z">
+                    </path>
+                </svg>
+            </div>
+            <div class="othernav">
+                <div class="pages">
+                    <a href="*">Premium</a>
+                    <a href="*">Support</a>
+                    <a href="*">Download</a>&nbsp;&nbsp;<span class="line">|</span>&nbsp;&nbsp;&nbsp;
+                    <span class="options">
+                        <a href="*"><svg class="install" data-encore-id="icon" role="img" aria-hidden="true"
+                                class="e-91000-icon e-91000-baseline" viewBox="0 0 16 16"
+                                style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                                <path
+                                    d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528-.005-.005-2.472-2.473a.75.75 0 0 1 0-1.06">
+                                </path>
+                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13">
+                                </path>
+                            </svg>&nbsp;&nbsp;Install App</a>
+                        <a href="*">Signup</a>
+                        &nbsp;
+                        <button class="login-button">Log in</button>
+                    </span>
+
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="main-layout">
+        <div class="left">
+            <div class="lefthead">
+                Your Library
+                <span class="plus">+</span>
+            </div>
+            <br>
+            <br>
+        <!-- <div class="playlist">
+            <span class="bold">
+                Create your first
+
+            </span>
+
+            <p class="font-normal">It's easy we'll help you</p> 
+            <button class="createplaylist">
+                Create playlist
+            </button>
+            <br>
+        <div class="follow">
+            <span class="bold">
+                Let's find some podcasts to follow 
+
+            </span>
+
+            <p class="font-normal">We'll keep you updated on new episodes</p> 
+            <button class="createplaylist">
+                Browse podcasts
+            </button>
+        </div>
+    </div> -->
+        </div>
+
+        <div class="right">
+            <!-- Add content here so the right panel is clearly visible -->
+            <div class="right-head">
+                Trending Songs
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
